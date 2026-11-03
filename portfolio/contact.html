@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Cameron Sandolph</title>
+<meta name="description" content="Send Cameron Sandolph a message.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Cameron Sandolph</a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="index.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h1>Let's talk.</h1>
+    <p class="lede">Have a quote you'd like reviewed, or a question about leasing or financing? Send a note and I'll reply within two business days.</p>
+
+    <!--
+      To deliver messages, set data-endpoint to a form service URL (for example a
+      Formspree endpoint: https://formspree.io/f/xxxxxxx). Without one, the form
+      opens the visitor's email app addressed to data-email.
+    -->
+    <form class="form" id="contact-form" novalidate
+          data-endpoint=""
+          data-email="hello@example.com">
+      <div class="row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+          <p class="error" id="name-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+          <p class="error" id="email-error" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="subject">Subject <span class="note">(optional)</span></label>
+        <input id="subject" name="subject" type="text">
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required minlength="10" aria-describedby="message-error"></textarea>
+        <p class="error" id="message-error" aria-live="polite"></p>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="company">Leave this field empty</label>
+        <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <div>
+        <button class="button" type="submit">Send message</button>
+      </div>
+      <p class="status" id="form-status" role="status" aria-live="polite"></p>
+      <p class="note">Please don't include account numbers, your SSN or other sensitive personal information.</p>
+    </form>
+  </div>
+</main>
+<script src="contact.js"></script>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span data-year>2026</span> Cameron Sandolph</span>
+    <a href="contact.html">Get in touch</a>
+  </div>
+</footer>
+<script>document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
+</body>
+</html>
